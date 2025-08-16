@@ -3,4 +3,3 @@
 
 echo "hello world" 
 echo "This is the second line of code which is used to design the  software"
-echo "This is third line of code "
