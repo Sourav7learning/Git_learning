@@ -1,15 +1,400 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>First Web Page</title>
+    <title>GitHub Project</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #f6f8fa 0%, #e0e7ef 100%);
+            color: #23272f;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(90deg, #24292f 60%, #0366d6 100%);
+            color: #fff;
+            padding: 24px 0;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(36, 41, 47, 0.12);            body {
+                font-family: 'Segoe UI', Arial, sans-serif;
+                background: linear-gradient(135deg, #f6f8fa 0%, #e0e7ef 100%);
+                color: #23272f;
+                margin: 0;
+                padding: 0;
+            }
+            
+            header {
+                background: linear-gradient(90deg, #24292f 60%, #0366d6 100%);
+                color: #fff;
+                padding: 24px 0;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 0 4px 16px rgba(36, 41, 47, 0.12);
+            }
+            
+            header img {
+                height: 48px;
+                margin-right: 18px;
+                border-radius: 8px;
+                background: #fff;
+                padding: 4px;
+            }
+            
+            header span {
+                font-size: 2rem;
+                font-weight: bold;
+                letter-spacing: 2px;
+                text-shadow: 1px 2px 8px #0366d6;
+            }
+            
+            nav {
+                margin-top: 0;
+                text-align: center;
+                background: #fff;
+                box-shadow: 0 2px 8px rgba(3, 102, 214, 0.04);
+                padding: 12px 0;
+            }
+            
+            nav a {
+                color: #0366d6;
+                text-decoration: none;
+                margin: 0 18px;
+                font-weight: 600;
+                font-size: 1.1em;
+                transition: color 0.2s;
+                position: relative;
+            }
+            
+            nav a:after {
+                content: '';
+                display: block;
+                margin: 0 auto;
+                width: 0%;
+                height: 2px;
+                background: #0366d6;
+                transition: width 0.2s;
+            }
+            
+            nav a:hover {
+                color: #24292f;
+            }
+            
+            nav a:hover:after {
+                width: 80%;
+            }
+            
+            .container {
+                max-width: 900px;
+                margin: 40px auto;
+                background: rgba(255, 255, 255, 0.98);
+                border-radius: 16px;
+                box-shadow: 0 8px 32px rgba(36, 41, 47, 0.10);
+                padding: 40px 32px;
+                animation: fadeIn 1s;
+            }
+            
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            h1 {
+                color: #0366d6;
+                font-size: 2.5rem;
+                margin-bottom: 12px;
+            }
+            
+            h2 {
+                color: #24292f;
+                margin-top: 32px;
+                margin-bottom: 12px;
+            }
+            
+            ul {
+                padding-left: 24px;
+            }
+            
+            li {
+                margin-bottom: 8px;
+                font-size: 1.08em;
+            }
+            
+            .features {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 18px;
+                margin-top: 18px;
+            }
+            
+            .feature-card {
+                flex: 1 1 220px;
+                background: #f6f8fa;
+                border-radius: 10px;
+                box-shadow: 0 2px 8px rgba(3, 102, 214, 0.06);
+                padding: 18px 16px;
+                min-width: 180px;
+                text-align: center;
+                transition: transform 0.2s, box-shadow 0.2s;
+            }
+            
+            .feature-card:hover {
+                transform: translateY(-6px) scale(1.03);
+                box-shadow: 0 8px 24px rgba(3, 102, 214, 0.13);
+            }
+            
+            .feature-card span {
+                font-size: 2rem;
+                display: block;
+                margin-bottom: 8px;
+            }
+            
+            .cta {
+                margin: 36px 0 0 0;
+                text-align: center;
+            }
+            
+            .cta button {
+                background: linear-gradient(90deg, #0366d6, #24292f);
+                color: #fff;
+                border: none;
+                border-radius: 6px;
+                padding: 14px 36px;
+                font-size: 1.2rem;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0 2px 8px rgba(3, 102, 214, 0.09);
+                transition: background 0.2s, transform 0.2s;
+            }
+            
+            .cta button:hover {
+                background: linear-gradient(90deg, #24292f, #0366d6);
+                transform: scale(1.04);
+            }
+            
+            footer {
+                text-align: center;
+                padding: 20px 0;
+                background: #eaecef;
+                color: #333;
+                font-size: 1em;
+                margin-top: 40px;
+                letter-spacing: 1px;
+            }
+            
+            @media (max-width: 700px) {
+                .container {
+                    padding: 18px 4px;
+                }
+                header {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+                header img {
+                    margin-bottom: 10px;
+                }
+                .features {
+                    flex-direction: column;
+                }
+            }
+        }
+
+        header img {
+            height: 48px;
+            margin-right: 18px;
+            border-radius: 8px;
+            background: #fff;
+            padding: 4px;
+        }
+
+        header span {
+            font-size: 2rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 1px 2px 8px #0366d6;
+        }
+
+        nav {
+            margin-top: 0;
+            text-align: center;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(3, 102, 214, 0.04);
+            padding: 12px 0;
+        }
+
+        nav a {
+            color: #0366d6;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: color 0.2s;
+            position: relative;
+        }
+
+        nav a:after {
+            content: '';
+            display: block;
+            margin: 0 auto;
+            width: 0%;
+            height: 2px;
+            background: #0366d6;
+            transition: width 0.2s;
+        }
+
+        nav a:hover {
+            color: #24292f;
+        }
+
+        nav a:hover:after {
+            width: 80%;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(36, 41, 47, 0.10);
+            padding: 40px 32px;
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #0366d6;
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        h2 {
+            color: #24292f;
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            padding-left: 24px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 1.08em;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 18px;
+        }
+
+        .feature-card {
+            flex: 1 1 220px;
+            background: #f6f8fa;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(3, 102, 214, 0.06);
+            padding: 18px 16px;
+            min-width: 180px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-6px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(3, 102, 214, 0.13);
+        }
+
+        .feature-card span {
+            font-size: 2rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .cta {
+            margin: 36px 0 0 0;
+            text-align: center;
+        }
+
+        .cta button {
+            background: linear-gradient(90deg, #0366d6, #24292f);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            padding: 14px 36px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(3, 102, 214, 0.09);
+            transition: background 0.2s, transform 0.2s;
+        }
+
+        .cta button:hover {
+            background: linear-gradient(90deg, #24292f, #0366d6);
+            transform: scale(1.04);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #eaecef;
+            color: #333;
+            font-size: 1em;
+            margin-top: 40px;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                padding: 18px 4px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            header img {
+                margin-bottom: 10px;
+            }
+
+            .features {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <img src="github-mark-white.png" alt="GitHub Logo">
-        <span style="font-size:1.7rem;font-weight:bold;">GitHub Project</span>
+        <span>GitHub Project</span>
     </header>
     <nav>
         <a href="#">Home</a>
@@ -20,12 +405,34 @@
     <div class="container">
         <h1>Welcome to the GitHub Big this is necessary Project Page</h1>
         <p>This is a simple, modern, and responsive static site template. You can use this as a starting point for your blog or project documentation.</p>
-        <h2>Features</h2>
+        <div class="features">
+            <div class="feature-card">
+                <span>⚡</span>
+                Modern UI with CSS
+            </div>
+            <div class="feature-card">
+                <span>🐙</span>
+                GitHub branding in the header
+            </div>
+            <div class="feature-card">
+                <span>📱</span>
+                Responsive layout
+            </div>
+            <div class="feature-card">
+                <span>🌈</span>
+                Easy to customize
+            </div>
+        </div>
+        <h2>Why use this template?</h2>
         <ul>
-            <li>Modern UI with CSS</li>
-            <li>GitHub branding in the header</li>
-            <li>Responsive layout</li>
+            <li>Clean and attractive design with subtle animations</li>
+            <li>Ready for your GitHub or IT project showcase</li>
+            <li>Fully responsive for mobile and desktop</li>
+            <li>Easy to extend with your own content and styles</li>
         </ul>
+        <div class="cta">
+            <button onclick="alert('Thank you for visiting!')">Get Started</button>
+        </div>
     </div>
     <footer>
         &copy; 2025 GitHub Project &mdash; All rights reserved.
